@@ -15,4 +15,9 @@ FOUNDATION_EXPORT const unsigned char LuaCVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <LuaC/PublicHeader.h>
 
+#import <LuaC/mil_lua.h>
+#import <LuaC/mil_lualib.h>
+#import <LuaC/mil_lauxlib.h>
+#import <LuaC/mil_luaconf.h>
+
 

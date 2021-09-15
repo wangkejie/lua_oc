@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import <PatchCore/PatchCore.h>
 
 @interface ViewController ()
 
@@ -16,6 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    CFAbsoluteTime begin = CFAbsoluteTimeGetCurrent();
+    
+    //启动引擎
+    [CrossTest start];
+    
+    //测试加载lua
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"luatest" ofType:@"lua"];
+    [CrossTest loadFileInPath:path];
+    
+    CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
+    NSLog(@"pacthcore耗时=========== %0.5f",end - begin);
+
+    //调用原生
+    
 }
 
 
