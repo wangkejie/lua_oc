@@ -17,6 +17,14 @@ lua_State *luaP_currentState() {
 }
 static int __index(lua_State *L) {
     NSLog(@"__index");
+    
+    const char *className = luaL_checkstring(L, 2);
+    NSLog(@"className = %s",className);
+    if (!className) {
+        lua_pushnil(L);
+        return 1;
+    }
+    
     return 1;
 }
 static int __call(lua_State *L) {
@@ -76,7 +84,7 @@ static const struct luaL_Reg Functions[] = {
     //设置为index的元表，并pop stack
     lua_setmetatable(l, -2);
  
-    //清理栈
+    //清理栈空间
     lua_settop(l, 0);
 }
 

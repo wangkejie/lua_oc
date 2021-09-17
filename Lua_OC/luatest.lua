@@ -22,7 +22,7 @@ setmetatable(_G, {
 
 
 print("222222222222")
-
+dddddd()
 print(__OC_CLASS_TABLE)
 print(__OC_CLASS_MEETATABLE)
 print(__OC_CLASS_MEETATABLE)

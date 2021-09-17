@@ -8,6 +8,9 @@
 #import "ViewController.h"
 #import <PatchCore/PatchCore.h>
 
+#import <KJPatch/KJPatch.h>
+
+
 @interface ViewController ()
 
 @end

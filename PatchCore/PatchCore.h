@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char PatchCoreVersionString[];
 #import <PatchCore/CrossTest.h>
 
 
+//此文件夹内是测试demo， 正式的库，请查阅 <KJPatch>
